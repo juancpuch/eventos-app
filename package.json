@@ -2,8 +2,11 @@
   "name": "eventos-app",
   "private": true,
   "version": "0.1.0",
-  "packageManager": "pnpm@9",
-  "workspaces": ["apps/*", "packages/*"],
+  "packageManager": "pnpm@10.28.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "pnpm -r run build",
     "dev": "pnpm -r --parallel run dev",
@@ -12,5 +15,19 @@
     "format": "prettier . --write",
     "compose:up": "docker compose up -d --build",
     "compose:down": "docker compose down -v"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^25.2.0",
+    "@vitest/coverage-v8": "^4.0.18",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.54.0",
+    "vitest": "^4.0.18",
+    "lint:fix": "eslint . --fix"
   }
 }
